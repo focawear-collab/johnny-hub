@@ -1,17 +1,23 @@
-import { useState, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { getJournalEntries, addJournalEntry, type JournalEntry } from '@/lib/db';
 
 export function useJournal() {
-  const [entries, setEntries] = useState<JournalEntry[]>(() => getJournalEntries());
+  const [entries, setEntries] = useState<JournalEntry[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const add = useCallback((entry: Omit<JournalEntry, 'created_at'>) => {
-    addJournalEntry(entry);
-    setEntries(getJournalEntries());
+  useEffect(() => {
+    getJournalEntries().then(e => { setEntries(e); setLoading(false); });
   }, []);
 
-  const reload = useCallback(() => {
-    setEntries(getJournalEntries());
+  const add = useCallback(async (entry: Omit<JournalEntry, 'created_at'>) => {
+    await addJournalEntry(entry);
+    const updated = await getJournalEntries();
+    setEntries(updated);
   }, []);
 
-  return { entries, add, reload };
+  const reload = useCallback(async () => {
+    setEntries(await getJournalEntries());
+  }, []);
+
+  return { entries, loading, add, reload };
 }
