@@ -1,4 +1,3 @@
-// FILE: app/app/livebake.tsx
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {

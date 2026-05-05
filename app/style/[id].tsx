@@ -1,4 +1,3 @@
-// FILE: app/app/style/[id].tsx
 
 import React from 'react';
 import {

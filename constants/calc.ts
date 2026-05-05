@@ -1,4 +1,3 @@
-// FILE: app/constants/calc.ts
 
 import { PIZZA_STYLES } from './data';
 

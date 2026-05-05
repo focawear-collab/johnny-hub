@@ -1,4 +1,3 @@
-// FILE: app/app/profile.tsx
 
 import React, { useState } from 'react';
 import {

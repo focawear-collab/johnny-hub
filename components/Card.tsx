@@ -1,4 +1,3 @@
-// FILE: app/components/Card.tsx
 
 import React from 'react';
 import { View, ViewStyle, StyleSheet, StyleProp } from 'react-native';

@@ -1,4 +1,3 @@
-// FILE: app/app/techniques.tsx
 
 import React from 'react';
 import {

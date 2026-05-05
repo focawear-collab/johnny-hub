@@ -1,4 +1,3 @@
-// FILE: app/constants/tokens.ts
 
 import { ViewStyle } from 'react-native';
 

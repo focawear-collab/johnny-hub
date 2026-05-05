@@ -1,4 +1,3 @@
-// FILE: app/app/recipe/[id].tsx
 
 import React, { useState } from 'react';
 import {

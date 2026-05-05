@@ -1,4 +1,3 @@
-// FILE: app/app/(tabs)/timer.tsx
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import {
   View,

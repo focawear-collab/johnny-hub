@@ -1,4 +1,3 @@
-// FILE: app/app/pairings.tsx
 
 import React, { useState } from 'react';
 import {

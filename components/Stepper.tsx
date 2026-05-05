@@ -1,4 +1,3 @@
-// FILE: app/components/Stepper.tsx
 
 import React, { useCallback } from 'react';
 import {

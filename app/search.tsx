@@ -1,4 +1,3 @@
-// FILE: app/app/search.tsx
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import {

@@ -1,4 +1,3 @@
-// FILE: app/components/TopBar.tsx
 
 import React from 'react';
 import {

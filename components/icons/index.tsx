@@ -1,4 +1,3 @@
-// FILE: app/components/icons/index.tsx
 
 import React from 'react';
 import Svg, {

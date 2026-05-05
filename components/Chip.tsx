@@ -1,4 +1,3 @@
-// FILE: app/components/Chip.tsx
 
 import React from 'react';
 import {

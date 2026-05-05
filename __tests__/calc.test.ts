@@ -1,4 +1,3 @@
-// FILE: app/__tests__/calc.test.ts
 
 import {
   calcFormula,

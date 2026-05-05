@@ -1,4 +1,3 @@
-// FILE: app/app/(tabs)/recipes.tsx
 import React, { useState } from 'react';
 import {
   View,

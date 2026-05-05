@@ -1,4 +1,3 @@
-// FILE: app/hooks/useTimer.ts
 import { useState, useEffect, useRef, useCallback } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { updateBakeStatus } from '../lib/db';

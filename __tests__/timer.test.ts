@@ -1,4 +1,3 @@
-// FILE: app/__tests__/timer.test.ts
 
 import { fermentPhaseAt, fmtTime } from '@/constants/calc';
 

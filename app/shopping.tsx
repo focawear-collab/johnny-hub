@@ -1,4 +1,3 @@
-// FILE: app/app/shopping.tsx
 
 import React, { useState } from 'react';
 import {

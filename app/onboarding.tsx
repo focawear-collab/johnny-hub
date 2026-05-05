@@ -1,4 +1,3 @@
-// FILE: app/app/onboarding.tsx
 
 import React, { useState } from 'react';
 import {

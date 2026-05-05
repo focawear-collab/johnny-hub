@@ -1,4 +1,3 @@
-// FILE: app/jest.config.js
 
 /** @type {import('jest').Config} */
 module.exports = {
