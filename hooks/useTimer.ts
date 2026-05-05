@@ -1,7 +1,7 @@
 // FILE: app/hooks/useTimer.ts
 import { useState, useEffect, useRef, useCallback } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { supabase } from '../lib/supabase';
+import { updateBakeStatus } from '../lib/db';
 import {
   notifyFermentComplete,
   cancelFermentNotification,
@@ -198,15 +198,9 @@ export function useTimer(): UseTimerReturn {
       setStatus('done');
       cancelFermentNotification();
 
-      // Mark bake session as done in Supabase
       if (bakeSessionId) {
-        supabase
-          .from('bake_sessions')
-          .update({ status: 'done', completed_at: new Date().toISOString() })
-          .eq('id', bakeSessionId)
-          .then(({ error }) => {
-            if (error) console.warn('[useTimer] Failed to update bake session:', error.message);
-          });
+        try { updateBakeStatus(bakeSessionId, 'done', new Date().toISOString()); }
+        catch (e) { console.warn('[useTimer] Failed to update bake session:', e); }
       }
 
       persist({ status: 'done' });
